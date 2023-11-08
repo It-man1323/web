@@ -1,0 +1,353 @@
+/* ------------------------------ */
+.custom__wrapper {
+   display: flex;
+   align-items: center;
+   padding-left: 50px;
+   width: max-content;
+   height: 100vh;
+   background-color: #e5e5e5;
+   font-family: Open Sans;
+   font-size: 14px;
+   font-weight: normal;
+   color: #333;
+}
+
+.custom__wrapper__checkbox {
+   margin-right: 50px;
+   width: 176px;
+   height: 309px;
+   background-color: #fff;
+   border: 1px solid #fff;
+   border-radius: 10px;
+}
+
+.custom__checkbox {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left: 20%;
+}
+
+.custom__checkbox__title {
+   font-size: 18px;
+   margin-bottom: 30px;
+   text-align: center;
+}
+
+label {
+   position: relative;
+   padding-left: 25px;
+   margin-bottom: 20px;
+   font-size: 14px;
+   cursor: pointer;
+}
+
+#check-one,
+#check-two,
+#check-three,
+#check-four,
+#check-five,
+#check-six {
+   display: none;
+}
+
+#check-one+span,
+#check-two+span,
+#check-three+span,
+#check-four+span,
+#check-five+span,
+#check-six+span {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 15px;
+   height: 15px;
+   border: 1px solid #ccb26e;
+   border-radius: 3px;
+}
+
+#check-one+span::before,
+#check-two+span::before,
+#check-three+span::before,
+#check-four+span::before,
+#check-five+span::before,
+#check-six+span::before {
+   content: url('../img/label.svg');
+   position: absolute;
+   top: -1px;
+   bottom: 0;
+   left: 20%;
+   right: 0;
+   opacity: 0;
+   transition: opacity .3 ease-in-out;
+}
+
+#check-one:checked+span::before,
+#check-two:checked+span::before,
+#check-three:checked+span::before,
+#check-four:checked+span::before,
+#check-five:checked+span::before,
+#check-six:checked+span::before {
+   opacity: 1;
+}
+
+/* select */
+.custom__wrapper__select {
+   position: relative;
+   top: -135px;
+   margin-right: 50px;
+}
+
+.choices {
+   width: inherit;
+   height: inherit;
+}
+
+.choices__inner {
+   position: relative;
+   z-index: 10;
+   padding: 8px 9px;
+   width: 155px;
+   height: 20px;
+   min-height: 0;
+   border: 1px solid #ccb26e;
+   border-radius: 10px;
+   line-height: .8;
+}
+
+.choices__inner:hover,
+.choices__inner:active {
+   border: 1px solid #ccb26e;
+   border-radius: 10px;
+}
+
+.choices__list {
+   width: auto;
+}
+
+.choices__list .is-active {
+   width: auto;
+}
+
+.is-open .choices__inner {
+   border: 1px solid #ccb26e;
+}
+
+.is-open .choices__list--dropdown {
+   width: auto;
+   padding-top: 13px;
+   margin-top: -13px;
+}
+
+.choices__list[aria-expanded] .choices__item--selectable {
+   width: 143px;
+   padding-right: 20px;
+}
+
+.choices__item--choice {
+   width: auto;
+}
+
+.choices__placeholder {
+   opacity: 1;
+}
+
+.is-open .choices__list[aria-expanded] {
+   border-color: #ccb26e;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+
+.choices[data-type*=select-one]::after {
+   content: url(../img/label-select-close.svg);
+   height: 0;
+   width: 0;
+   border: none;
+   position: absolute;
+   right: 25px;
+   top: 27%;
+   z-index: 15;
+   margin-top: -2.5px;
+   pointer-events: none;
+}
+
+.choices[data-type*=select-one].is-open::after {
+   content: url(../img/label-select-open.svg);
+   top: 25%;
+   border: none;
+   margin: 0;
+}
+
+#choices--select-item-choice-1 {
+   display: none;
+}
+
+/* map */
+.custom__wrapper__map {
+   position: relative;
+   top: 75px;
+   margin-right: 50px;
+}
+
+[class*="ground-pane"] {
+   filter: grayscale(1);
+}
+
+/* scroll */
+.custom__wrapper__scroll {
+   margin-right: 50px;
+}
+
+.simplebar-content-wrapper {
+   overflow: auto;
+}
+
+.custom__scroll {
+   width: 399px;
+   height: 310px;
+   background-color: #fff;
+}
+
+.custom__scroll__text {
+   padding: 20px 30px 0 29px;
+   width: 340px;
+   font-size: 14px;
+   line-height: 24px;
+}
+
+.simplebar-scrollbar::before {
+   background-color: #ccb26e;
+}
+
+/* form */
+.custom__wrapper__form {
+   position: relative;
+   top: 60px;
+   margin-right: 50px;
+   width: 440px;
+   min-height: 410px;
+   background-color: rgba(0, 0, 0, 0.8);
+   border: 0px solid;
+   border-radius: 10px;
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 40px;
+   padding: 0 30px;
+}
+
+.input {
+   padding-inline-start: 20px;
+   padding-inline-end: 20px;
+   width: 340px;
+   height: 60px;
+   outline: none;
+   border: 0 solid;
+   border-radius: 10px;
+   font-size: 16px;
+}
+
+.input:focus {
+   border: 1px solid #ff5c00;
+}
+
+.form__input-box {
+   display: flex;
+   flex-direction: column-reverse;
+   height: 80px;
+}
+
+.form__input-box:not(:nth-last-child(2)) {
+   margin-bottom: 15px;
+}
+
+.form__input-box:nth-last-child(2) {
+   margin-bottom: 30px;
+}
+
+.form__input-box:first-child {
+   padding-top: 30px;
+}
+
+.just-validate-error-label {
+   padding-left: 15px;
+   margin-bottom: 4px;
+   width: max-content;
+   font-size: 12px;
+}
+
+.just-validate-error-field {
+   border: 1px solid #ff5c00;
+}
+
+.form__btn {
+   align-self: flex-start;
+   padding: 10px 20px;
+   width: 192px;
+   height: 60px;
+   border: 0 solid;
+   border-radius: 10px;
+   background-color: #FF5C00;
+   color: #fff;
+   font-size: 20px;
+   line-height: 23.44px;
+}
+
+/* tooltip */
+.custom__wrapper__tooltip {
+   margin-right: 50px;
+   width: 375px;
+   height: 160px; 
+   background-color: #fff;
+}
+
+.tooltip__block__text {
+   padding: 20px 78px 20px 29px;
+}
+
+.tooltip__text {
+   line-height: 23.8px;
+}
+
+.tooltip__block {
+   display: inline-block;
+   position: relative;
+}
+
+.popup {
+   visibility: hidden;
+   width: 164px;
+   background-color: #666;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+   position: absolute;
+   z-index: 1;
+   bottom: 150%;
+   left: 50%;
+   margin-left: -82px;
+   font-size: 12px;
+}
+
+.popup::after {
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: #666 transparent transparent transparent;
+ }
+
+.tooltip:hover + .popup {
+   visibility: visible;
+}
+
+.tooltip:hover path {
+   fill: #ccb26e;
+}
