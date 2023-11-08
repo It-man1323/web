@@ -70,9 +70,9 @@ const swiper = new Swiper('.swiper', {
       type: 'bullets',
       clickable: true,
    },
-   // autoplay: {
-   //    delay: 8000,
-   // },
+   autoplay: {
+      delay: 3000,
+   },
 });
 
 //$ _________________tabs_________________
